@@ -1,7 +1,7 @@
 # Pousada Vista Mar - Site de 5 telas
 
 ## Tema
-Pousada (tema sorteado nº 12): quartos, tipos e diárias.
+Pousada: quartos, tipos e diárias.
 
 ## Descrição
 Site de 5 telas interligadas por um mesmo menu, feito de forma individual
@@ -11,26 +11,11 @@ Regra especial do tema: **total = valor da diária x número de diárias x quant
 A partir de **3 diárias** o cliente ganha **12% de desconto**.
 
 ## Telas
-| Tela | Arquivo | O que faz |
-|------|---------|-----------|
 | Início | `index.html` | Apresentação, imagem, 3 destaques e links |
 | Catálogo | `catalogo.html` | 8 quartos criados por JavaScript, filtro por categoria, contador e total |
 | Simulador | `simulador.html` | Escolhe quarto, diárias e quantidade e calcula o total com desconto |
 | Cadastro | `cadastro.html` | Formulário com 5 campos e validação em JavaScript |
 | Sobre e dúvidas | `sobre.html` | Tabela, lista ordenada e perguntas frequentes que abrem e fecham |
-
-## Estrutura de arquivos
-```
-projeto-pousada-seunome/
-├── index.html
-├── catalogo.html
-├── simulador.html
-├── cadastro.html
-├── sobre.html
-├── style.css
-├── script.js
-└── README.md
-```
 
 ## Como executar
 1. Abra a pasta no Visual Studio Code.
@@ -46,4 +31,4 @@ Coloque aqui os prints das 5 telas (salve as imagens numa pasta `prints/`):
 - Sobre e dúvidas: `![Sobre](prints/sobre.png)`
 
 ## Autor
-Nome: _________________  Turma: _________________
+Nome: Victor Cesar  Turma: Tec.206.060
