@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastro de hóspedes da Pousada Vista Mar.">
+  <title>Cadastro | Pousada Vista Mar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Pousada Vista Mar</h1>
+    <nav class="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+        <li><a href="sobre.html">Sobre e dúvidas</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Cadastro de hóspede</h2>
+      <p>Preencha os dados abaixo para pré-reservar sua estadia.</p>
+      <!-- novalidate: desliga a validação do navegador para usarmos a nossa, em JavaScript -->
+      <form id="form-cadastro" novalidate>
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: Maria da Silva">
+          <p class="erro" id="erro-nome"></p>
+        </div>
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="exemplo@email.com">
+          <p class="erro" id="erro-email"></p>
+        </div>
+        <div class="campo">
+          <label for="telefone">Telefone (com DDD)</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="81999998888">
+          <p class="erro" id="erro-telefone"></p>
+        </div>
+        <div class="campo">
+          <label for="checkin">Data de entrada (check-in)</label>
+          <input type="date" id="checkin" name="checkin">
+          <p class="erro" id="erro-checkin"></p>
+        </div>
+        <div class="campo">
+          <label for="hospedes">Número de hóspedes</label>
+          <input type="number" id="hospedes" name="hospedes" min="1" max="10" placeholder="Ex.: 2">
+          <p class="erro" id="erro-hospedes"></p>
+        </div>
+        <button type="submit">Enviar cadastro</button>
+      </form>
+      <div class="sucesso" id="mensagem-sucesso" role="status" hidden></div>
+    </section>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 Pousada Vista Mar - Atividade prática de site de 5 telas</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
