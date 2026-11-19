@@ -32,3 +32,25 @@ Coloque aqui os prints das 5 telas (salve as imagens numa pasta `prints/`):
 
 ## Autor
 Nome: Victor Cesar  Turma: Tec.206.060
+
+# Prints
+
+**INICIO**
+
+![Tela inicial](prints/Prints/Inicio.png)
+
+**CELULAR**
+
+![Site no celular](prints/Prints/Celular.png)
+
+**SIMULADOR**
+
+![simulador de estadia](prints/Prints/Simulador.png)
+
+**CADASTRO**
+
+![cadastro de hospede](prints/Prints/Cadastro.png)
+
+**SOBRE A POUSADA**
+
+![tipos de quarto](prints/Prints/Sobre%20a%20pausa.png)
