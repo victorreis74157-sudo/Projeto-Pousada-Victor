@@ -1,0 +1,365 @@
+/* =========================================================
+   style.css - Pousada Vista Mar
+   Um único arquivo de estilos para as 5 telas.
+   ========================================================= */
+
+/* 1) VARIÁVEIS DE COR (:root)
+   Para mudar o visual do site inteiro, basta trocar as cores aqui. */
+:root {
+  --cor-primaria: #0b6e8a;
+  --cor-escura: #08374a;
+  --cor-clara: #e8f4f8;
+  --cor-destaque: #f2a541;
+  --cor-texto: #1d2b33;
+  --cor-borda: #d5e3e8;
+  --cor-erro: #c0392b;
+  --cor-ok: #1e8449;
+  --raio: 12px;
+}
+
+/* 2) RESET BÁSICO
+   box-sizing: border-box faz o padding entrar na largura do elemento. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cor-texto);
+  background: #f7fafb;
+  line-height: 1.6;
+}
+
+/* 3) CABEÇALHO E MENU (mesmo menu nas 5 telas) */
+.topo {
+  background: var(--cor-escura);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 24px;
+}
+
+.topo h1 {
+  font-size: 1.3rem;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.menu a:hover,
+.menu a:focus {
+  background: var(--cor-primaria);
+  outline: 2px solid var(--cor-destaque);
+}
+
+/* Link da página atual */
+.menu a[aria-current="page"] {
+  background: var(--cor-destaque);
+  color: var(--cor-escura);
+  font-weight: bold;
+}
+
+/* 4) CONTEÚDO PRINCIPAL */
+main {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+main h2 {
+  color: var(--cor-escura);
+  margin-bottom: 12px;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+.apresentacao img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--raio);
+  margin: 12px 0;
+}
+
+/* 5) CARTÕES (flexbox + box model) */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card {
+  flex: 1 1 260px;
+  background: #fff;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 6px;
+}
+
+.etiqueta {
+  display: inline-block;
+  background: var(--cor-clara);
+  color: var(--cor-escura);
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.preco {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--cor-escura);
+  margin: 8px 0;
+}
+
+/* 6) BOTÕES E LINKS EM FORMA DE BOTÃO */
+.botao,
+button {
+  background: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.botao:hover,
+button:hover {
+  background: var(--cor-escura);
+}
+
+.botao:focus,
+button:focus,
+input:focus,
+select:focus {
+  outline: 3px solid var(--cor-destaque);
+}
+
+/* Botões de filtro do catálogo */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filtro {
+  background: #fff;
+  color: var(--cor-escura);
+  border: 2px solid var(--cor-primaria);
+}
+
+.filtro:hover {
+  background: var(--cor-clara);
+}
+
+.filtro.ativo {
+  background: var(--cor-primaria);
+  color: #fff;
+}
+
+.resumo-catalogo {
+  background: var(--cor-clara);
+  padding: 12px 16px;
+  border-radius: var(--raio);
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+/* 7) FORMULÁRIOS (simulador e cadastro) */
+form {
+  background: #fff;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 20px;
+  max-width: 560px;
+}
+
+.campo {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #9bb3bd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.erro {
+  color: var(--cor-erro);
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+input.invalido {
+  border-color: var(--cor-erro);
+}
+
+.resultado {
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--cor-clara);
+  border-radius: var(--raio);
+  max-width: 560px;
+}
+
+.resultado p {
+  margin-bottom: 4px;
+}
+
+.total-final {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--cor-escura);
+}
+
+.sucesso {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: #e6f4ea;
+  color: var(--cor-ok);
+  border-radius: var(--raio);
+  max-width: 560px;
+  font-weight: bold;
+}
+
+/* 8) TABELA */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+th,
+td {
+  border: 1px solid var(--cor-borda);
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: var(--cor-primaria);
+  color: #fff;
+}
+
+tbody tr:hover {
+  background: var(--cor-clara);
+}
+
+/* 9) LISTA ORDENADA */
+ol {
+  padding-left: 24px;
+}
+
+ol li {
+  margin-bottom: 6px;
+}
+
+/* 10) PERGUNTAS FREQUENTES (abrem e fecham) */
+.faq-item {
+  margin-bottom: 8px;
+}
+
+.faq-pergunta {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  color: var(--cor-escura);
+  border: 1px solid var(--cor-borda);
+}
+
+.faq-pergunta:hover {
+  background: var(--cor-clara);
+}
+
+.faq-resposta {
+  background: var(--cor-clara);
+  padding: 12px 16px;
+  border-radius: 0 0 8px 8px;
+}
+
+/* 11) RODAPÉ */
+.rodape {
+  background: var(--cor-escura);
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  margin-top: 32px;
+}
+
+/* 12) RESPONSIVO PARA CELULAR (até 600px) */
+@media (max-width: 600px) {
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu a {
+    display: block;
+  }
+
+  main {
+    margin: 16px auto;
+  }
+
+  th,
+  td {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+}
