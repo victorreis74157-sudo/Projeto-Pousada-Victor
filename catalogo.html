@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de quartos da Pousada Vista Mar com filtro por categoria.">
+  <title>Catálogo | Pousada Vista Mar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Pousada Vista Mar</h1>
+    <nav class="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+        <li><a href="simulador.html">Simulador</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="sobre.html">Sobre e dúvidas</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Catálogo de quartos</h2>
+      <p>Escolha uma categoria para filtrar os quartos.</p>
+      <!-- Botões de filtro: o JavaScript lê o data-categoria de cada um -->
+      <div class="filtros" aria-label="Filtro por categoria">
+        <button type="button" class="filtro ativo" data-categoria="Todos">Todos</button>
+        <button type="button" class="filtro" data-categoria="Standard">Standard</button>
+        <button type="button" class="filtro" data-categoria="Luxo">Luxo</button>
+        <button type="button" class="filtro" data-categoria="Suíte">Suíte</button>
+        <button type="button" class="filtro" data-categoria="Família">Família</button>
+      </div>
+      <!-- Contador de itens e total (preenchido pelo JavaScript) -->
+      <p class="resumo-catalogo" id="contador" aria-live="polite"></p>
+      <!-- Os cartões são criados pelo JavaScript a partir do array -->
+      <div class="cards" id="lista-quartos"></div>
+    </section>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 Pousada Vista Mar - Atividade prática de site de 5 telas</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
