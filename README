@@ -1,0 +1,49 @@
+# Pousada Vista Mar - Site de 5 telas
+
+## Tema
+Pousada (tema sorteado nº 12): quartos, tipos e diárias.
+
+## Descrição
+Site de 5 telas interligadas por um mesmo menu, feito de forma individual
+com HTML5, CSS e JavaScript puro (sem bibliotecas).
+
+Regra especial do tema: **total = valor da diária x número de diárias x quantidade de quartos**.
+A partir de **3 diárias** o cliente ganha **12% de desconto**.
+
+## Telas
+| Tela | Arquivo | O que faz |
+|------|---------|-----------|
+| Início | `index.html` | Apresentação, imagem, 3 destaques e links |
+| Catálogo | `catalogo.html` | 8 quartos criados por JavaScript, filtro por categoria, contador e total |
+| Simulador | `simulador.html` | Escolhe quarto, diárias e quantidade e calcula o total com desconto |
+| Cadastro | `cadastro.html` | Formulário com 5 campos e validação em JavaScript |
+| Sobre e dúvidas | `sobre.html` | Tabela, lista ordenada e perguntas frequentes que abrem e fecham |
+
+## Estrutura de arquivos
+```
+projeto-pousada-seunome/
+├── index.html
+├── catalogo.html
+├── simulador.html
+├── cadastro.html
+├── sobre.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+## Como executar
+1. Abra a pasta no Visual Studio Code.
+2. Clique com o botão direito em `index.html` e escolha **Open with Live Server**.
+
+## Prints
+Coloque aqui os prints das 5 telas (salve as imagens numa pasta `prints/`):
+
+- Início: `![Início](prints/inicio.png)`
+- Catálogo: `![Catálogo](prints/catalogo.png)`
+- Simulador: `![Simulador](prints/simulador.png)`
+- Cadastro: `![Cadastro](prints/cadastro.png)`
+- Sobre e dúvidas: `![Sobre](prints/sobre.png)`
+
+## Autor
+Nome: _________________  Turma: _________________
