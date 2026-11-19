@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simulador de estadia da Pousada Vista Mar: calcule o total com desconto.">
+  <title>Simulador | Pousada Vista Mar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Pousada Vista Mar</h1>
+    <nav class="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="simulador.html" aria-current="page">Simulador</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="sobre.html">Sobre e dúvidas</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Simulador de estadia</h2>
+      <p>
+        Regra da pousada: total = valor da diária &times; número de diárias &times; quantidade de quartos.
+        <strong>A partir de 3 diárias, você ganha 12% de desconto.</strong>
+      </p>
+      <form id="form-simulador" novalidate>
+        <div class="campo">
+          <label for="quarto">Quarto</label>
+          <!-- As opções são criadas pelo JavaScript a partir do array -->
+          <select id="quarto" name="quarto"></select>
+        </div>
+        <div class="campo">
+          <label for="diarias">Número de diárias</label>
+          <input type="number" id="diarias" name="diarias" min="1" value="1">
+        </div>
+        <div class="campo">
+          <label for="quantidade">Quantidade de quartos</label>
+          <input type="number" id="quantidade" name="quantidade" min="1" value="1">
+        </div>
+        <p class="erro" id="erro-simulador" role="alert"></p>
+        <button type="submit">Calcular total</button>
+      </form>
+      <div class="resultado" id="resultado" aria-live="polite" hidden></div>
+    </section>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 Pousada Vista Mar - Atividade prática de site de 5 telas</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
